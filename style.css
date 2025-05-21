@@ -22,3 +22,25 @@ hr{
   border-width: 3px;
   max-width: 65px;
 }
+/* Style the star rating icons */
+.star-rating {
+  font-size: 1.5em;
+  color: #f5a623; /* Yellow for filled stars */
+}
+
+.star-rating label {
+  cursor: pointer;
+}
+
+#star-rating input {
+  display: none;
+}
+
+#star-rating label {
+  font-size: 2em;
+  color: #ccc; /* Gray color for unselected stars */
+}
+
+#star-rating input:checked ~ label {
+  color: #f5a623; /* Change color when selected */
+}
