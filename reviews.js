@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
       id: Date.now(),
       user: username,
       text: reviewText,
-      rating: rating
+      rating: rating,
+      date: new Date().toLocaleString()
     };
 
     let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
