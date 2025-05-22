@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h5>${review.user}</h5>
         <div class="star-rating">${starRating}</div>
         <p>${review.text}</p>
+        <small class="text-muted">Posted on: ${review.date}</small><br>
         <button class="btn btn-sm btn-danger" onclick="deleteReview(${review.id})">Delete</button>
       `;
 
