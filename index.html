@@ -41,7 +41,7 @@
                 Contact us 👇
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://wa.me/2348165773599">Whatsapp </a></li>
+                <li><a class="dropdown-item" href="https://wa.me/2348165773599">Whatsapp</a></li>
                 <li><a class="dropdown-item" href="tel:+2348165773599">Call Us ☎</a></li>
                 <li><a class="dropdown-item" href="mailto:abrahamayomide117@gmail.com">E-mail ✉</a></li>
               </ul>
@@ -118,6 +118,28 @@
     <div class="container my-5">
       <h3 class="text-center mb-4">Customer Reviews</h3>
       <div id="reviewList" class="bg-secondary p-4 rounded"></div>
+    </div>
+
+    <!-- ✅ Toast Notification -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div
+        id="successToast"
+        class="toast align-items-center text-white bg-success border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-bs-delay="3000"
+      >
+        <div class="d-flex">
+          <div class="toast-body">✅ Review submitted successfully!</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
     </div>
 
     <!-- Scripts -->

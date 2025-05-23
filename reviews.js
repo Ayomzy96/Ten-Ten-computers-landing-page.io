@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     reviewForm.reset();
     loadReviews();
+
+    // ✅ Show Bootstrap Toast
+    const toastEl = document.getElementById("successToast");
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
   });
 
   function loadReviews() {
@@ -35,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const reviewElement = document.createElement("div");
       reviewElement.classList.add("border", "border-light", "p-3", "mb-3", "rounded");
 
-      let starRating = '';
+      let starRating = "";
       for (let i = 0; i < 5; i++) {
         starRating += i < review.rating ? "&#9733; " : "&#9734; ";
       }
@@ -52,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 🔒 Delete with password check
+  // 🔒 Secure delete with password
   window.deleteReview = function (id) {
     const password = prompt("Enter password to delete this review:");
-    const correctPassword = "Spongebob96#"; // 🔑 Set your password here
+    const correctPassword = "Spongebob96#";
 
     if (password === correctPassword) {
       let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
