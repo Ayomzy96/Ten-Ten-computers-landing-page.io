@@ -1,31 +1,32 @@
-body,
-html,botton {
+/* Reset default body background */
+body, html, button {
   width: 100%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
-  background: url(header.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: none; /* Remove global background image */
 }
-h1{
+
+/* GENERAL STYLES */
+h1 {
   font-size: 3rem;
   color: rgb(240, 240, 240);
 }
-.btn{
-  font-weight: 700px;
+
+.btn {
+  font-weight: 700;
   border-radius: 300px;
 }
-hr{
+
+hr {
   border-color: black;
   border-width: 3px;
   max-width: 65px;
 }
-/* Style the star rating icons */
+
+/* STAR RATING STYLES */
 .star-rating {
   font-size: 1.5em;
-  color: #f5a623; /* Yellow for filled stars */
+  color: #f5a623;
 }
 
 .star-rating label {
@@ -38,9 +39,45 @@ hr{
 
 #star-rating label {
   font-size: 2em;
-  color: #ccc; /* Gray color for unselected stars */
+  color: #ccc;
 }
 
 #star-rating input:checked ~ label {
-  color: #f5a623; /* Change color when selected */
+  color: #f5a623;
 }
+
+/* SECTION BACKGROUNDS */
+#welcome {
+  background: url('header.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 0;
+  position: relative;
+  z-index: 1;
+}
+#welcome::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* dark overlay */
+  z-index: -1;
+}
+
+#hero {
+  background: url('') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 0;
+}
+
+#review-form {
+  background: url('') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 0;
+}
+
+#reviews-display {
+  background: url('reviews-bg.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 0;
+}
+
