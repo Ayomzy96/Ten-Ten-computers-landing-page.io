@@ -98,9 +98,21 @@ hr {
 
 /* ABOUT US SECTION */
 #about {
-  background-color: #212529; /* Matches the dark sections like #review-form */
+  background: url('about\ us.png') no-repeat center center;
+  background-size: cover;
   padding: 5rem 2rem;
-  color: #f8f9fa; /* Matches text color in dark sections */
+  position: relative;
+  z-index: 1;
+  color: #f8f9fa;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: -1;
 }
 
 #about h2 {
