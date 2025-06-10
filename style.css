@@ -1,31 +1,32 @@
-body,
-html,botton {
+
+body, html, button {
   width: 100%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
-  background: url(header.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: none;
 }
-h1{
+
+/* GENERAL STYLES */
+h1 {
   font-size: 3rem;
   color: rgb(240, 240, 240);
 }
-.btn{
-  font-weight: 700px;
+
+.btn {
+  font-weight: 700;
   border-radius: 300px;
 }
-hr{
+
+hr {
   border-color: black;
   border-width: 3px;
   max-width: 65px;
 }
-/* Style the star rating icons */
+
+/* STAR RATING STYLES */
 .star-rating {
   font-size: 1.5em;
-  color: #f5a623; /* Yellow for filled stars */
+  color: #f5a623;
 }
 
 .star-rating label {
@@ -38,9 +39,125 @@ hr{
 
 #star-rating label {
   font-size: 2em;
-  color: #ccc; /* Gray color for unselected stars */
+  color: #ccc;
 }
 
 #star-rating input:checked ~ label {
-  color: #f5a623; /* Change color when selected */
+  color: #f5a623;
+}
+
+/* SECTION BACKGROUNDS */
+#welcome {
+  background: url('header.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 0;
+  position: relative;
+  z-index: 1;
+}
+#welcome::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 60%;
+  background: rgba(0,0,0,0.6); /* dark overlay */
+  z-index: -1;
+}
+
+#hero {
+  background: url('laptop.jpg') no-repeat center bottom;
+  background-size: cover;
+  padding: 5rem 0;
+  width: 100%;
+  min-height: 60vh;
+  background-repeat: no-repeat;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: -1;
+}
+
+
+#review-form {
+  background: url('') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 0;
+}
+
+#reviews-display {
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+  background: url('') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 0;
+}
+
+/* ABOUT US SECTION */
+#about {
+  background: url('about\ us.png') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 2rem;
+  position: relative;
+  z-index: 1;
+  color: #f8f9fa;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: -1;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#about h3 {
+  font-size: 1.75rem;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#about p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #e0e0e0;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+#about ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+}
+
+#about li {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #dee2e6;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+#about li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #0dcaf0; /* Highlight color for icons */
 }
