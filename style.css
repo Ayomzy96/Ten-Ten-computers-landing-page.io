@@ -69,6 +69,7 @@ hr {
   padding: 5rem 0;
   width: 100%;
   background-repeat: no-repeat;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
   
   
 }
@@ -84,11 +85,12 @@ hr {
 
 #about {
   position: relative;
-  background: url('joy-real-9D6BqumdCVE-unsplash.jpg') no-repeat center center;
+  background: url('klim-musalimov-Q_31jEQTE30-unsplash.jpg') no-repeat center center;
   background-size: cover;
   padding: 5rem 0rem;
   z-index: 1;
   color: #ffffff;
+  
 }
 
 #about::before {
@@ -97,6 +99,10 @@ hr {
   width: 100%; height: 100%;
   z-index: -1;
   background: rgba(0, 0, 0, 0.65);
+}
+
+#about p, #about h2, #about h3, #about li {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 #review-form {
@@ -113,49 +119,3 @@ hr {
   padding: 5rem 0;
 }
 
-#about h2 {
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-#about h3 {
-  font-size: 1.75rem;
-  color: #ffffff;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-#about p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #e0e0e0;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
-#about ul {
-  list-style: none;
-  padding-left: 0;
-  max-width: 700px;
-  margin: 2rem auto 0 auto;
-}
-
-#about li {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #dee2e6;
-  margin-bottom: 1rem;
-  position: relative;
-  padding-left: 1.8rem;
-}
-
-#about li::before {
-  content: "★";
-  position: absolute;
-  left: 0;
-  color: #0dcaf0; /* Highlight color for icons */
-}
